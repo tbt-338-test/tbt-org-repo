@@ -4,4 +4,4 @@ dist: focal
 
 vm:
   create:
-    name: long_image_name_abcdefghijklmnopqrstuvwx_123456789
+    name: short_image_name
