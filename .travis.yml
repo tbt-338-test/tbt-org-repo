@@ -5,4 +5,4 @@ virt: vm
 
 vm:
   create:
-    name: short_image_name
+    name: tbt_338_test_image_v01
