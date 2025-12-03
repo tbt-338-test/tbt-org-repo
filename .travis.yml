@@ -1,8 +1,24 @@
 os: linux
-language: generic
+language: java
+services:
+  - docker
+cache: bundler
 dist: focal
-virt: vm
+install: skip
 
-vm:
-  create:
-    name: tbt_338_test_image_v01
+stages:
+  - name: test
+
+jobs:
+  include:
+    - stage: test
+      name: testing
+      script: true
+
+after_success:
+  - echo passed
+  - echo $TRAVIS_TEST_RESULT
+
+after_failure:
+  - echo failed
+  - echo $TRAVIS_TEST_RESULT
